@@ -146,10 +146,12 @@ public class AssignmentChoose extends AppCompatActivity {
                 if (mAdapter.getItemCount()==0) {
                     recyclerView.setVisibility(View.GONE);
                     textView.setVisibility(View.VISIBLE);
+                    totalCount.setText("Total Pending Cases: ");
                 }
                 else {
                     recyclerView.setVisibility(View.VISIBLE);
                     textView.setVisibility(View.GONE);
+                    totalCount.setText("Total Pending Cases: "+ mAdapter.getItemCount());
                 }
             }
         });
@@ -216,7 +218,7 @@ public class AssignmentChoose extends AppCompatActivity {
                 @Override
                 public void onRefresh() {
                     totalCount.setText("Total Pending Cases: "+ mAdapter.getItemCount());
-                    
+
                     if(businessViewModel.getCount()+employmentViewModel.getCount() + residenceViewModel.getCount() + propertyViewModel.getCount()>0)
                     {
                         pendingCount = businessViewModel.getCount()+employmentViewModel.getCount()+residenceViewModel.getCount()+propertyViewModel.getCount();

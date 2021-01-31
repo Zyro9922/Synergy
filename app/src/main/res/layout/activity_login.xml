@@ -33,6 +33,9 @@
                 android:textColor="#234f62"
                 android:layout_marginTop="90dp" />
             <EditText
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
                 android:id="@+id/userNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,7 +44,8 @@
                 android:layout_marginRight="30dp"
                 android:padding="20dp"
                 android:layout_gravity="center"
-                android:hint="UserName" />
+                android:hint="UserName"
+                android:nextFocusDown="@+id/passEditText"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -54,6 +58,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="monospace"
                 android:layout_marginTop="40dp" />
+
             <EditText
                 android:id="@+id/passEditText"
                 android:layout_width="match_parent"
